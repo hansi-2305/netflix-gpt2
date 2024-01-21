@@ -6,13 +6,38 @@
 -Routing of app
 -login form
 -Sign up form  // can use formik
--orm validation
+-form validation
 - useRef hook
 -Firebase setup
 -Deploying our app to production
 -create signup user account 
 -Implement sign in user api
 -created redux store with user slice
+-Implemented sign out
+-update profile api call
+
+bugFix- sign up and profile update
+BugFix- if the user is not logged in redirect to  login page and vice versa 
+
+-unsbscribed to the onAuthStateChanged callback
+-Add harc coded values is constant file
+
+TMDB -> create account ->left side api ->find api key and api token
+
+-registr TMDB API & create an app & get acess token
+-get data from TMDB now playing and get the list
+
+-put this data in redux store
+
+-custoom hooks for now playing movies
+-update storewith movies data
+-plannig the main conatiner & secondary container
+-fetch data for trailer video
+-update store with trailer video data
+-embedded the youtube vdo and make it auto play
+-added tailind css to make it more beautiful
+
+
 
 
 
@@ -50,5 +75,6 @@
 
 ->provide the store ko ekdam root mei i.e is App.js
 
-->on auth state change use karte hai humlog jab state chnage hota hai like signin or signup baar baar kuch activities k liye for this use docmnettion Firebase->leftside->web->mamage uerd ->get the currently signed in useer 
+->on auth state change use karte hai humlog jab state chnage hota hai like signin or signup baar baar kuch activities k liye for this use docmnettion 
+Firebase->leftside->web->mamage uerd ->get the currently signed in useer 
 ->it is like event listener har baar call hoga yeh autiomatically->humlog ko baar baar dispatch action nhi likhna padega yehi sab mange kar dega

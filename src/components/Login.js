@@ -5,7 +5,10 @@ import Header from './Header'
 import {checkValidaData} from "../utils/validate"
 import {  createUserWithEmailAndPassword ,signInWithEmailAndPassword,updateProfile} from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
+import { BG_COVER, USER_PIC } from '../utils/constants';
 
 
 
@@ -14,7 +17,9 @@ const Login = () => {
   const [isSignInForm,setIsSignInForm]=useState(true);
   const [errorMessage,setErrorMessage]=useState(null);
 
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
+
+  const dispatch=useDispatch();
   const name=useRef(null);
 
   const email=useRef(null);
@@ -31,7 +36,7 @@ const Login = () => {
 
 
     const message=checkValidaData(email.current.value,password.current.value)
-    console.log(name);
+    // console.log(name);
     setErrorMessage(message);
 
 
@@ -51,10 +56,28 @@ const Login = () => {
       const user = userCredential.user;
 
       updateProfile(user, {
-        displayName: name.current.value, 
+        displayName: name.current.value,
+         photoURL:USER_PIC,
+
       }).then(() => {
+
         // Profile updated!
         // ...
+
+        
+        const {uid,email,displayName,photoURL} = auth.currentUser;
+        dispatch(
+          addUser({ 
+            uid:uid,
+            email:email,
+            displayName:displayName,
+            photoURL:photoURL
+          })
+        );
+
+
+
+      
       }).catch((error) => {
         // An error occurred
         // ...
@@ -67,8 +90,8 @@ const Login = () => {
 
 
 
-      console.log(user);
-      navigate("/browse");
+      // console.log(user);
+      // navigate("/browse");
       // ...
     })
     .catch((error) => {
@@ -88,7 +111,7 @@ const Login = () => {
           // Signed in 
           const user = userCredential.user;
            console.log("hello",user);
-           navigate("/browse");
+          //  navigate("/browse");
             // ...
           })
           .catch((error) => {
@@ -113,7 +136,7 @@ const Login = () => {
         <div className='absolute'>
 
         <img className="bg-cover"
-        src="https://wallpapers.com/images/hd/netflix-background-gs7hjuwvv2g0e9fj.jpg"
+        src={BG_COVER}
         alt="bg"/>
 
         </div>
@@ -121,11 +144,11 @@ const Login = () => {
         <form onSubmit={(e)=>e.preventDefault()} className=" w-3/12 absolute p-12 bg-black my-36 mx-auto  right-0 left-0 text-white rounded-lg bg-opacity-80">
           <h1 className="font-bold text-3xl py-4 ">
             
-            {isSignInForm? "Sign In" : "Sign Up"}</h1>
+            { isSignInForm? "Sign In" : "Sign Up"}</h1>
 
 
             { !isSignInForm && (<input 
-            useRef={name}
+            ref={name}
           type="text" 
           placeholder=" Full Name" 
           className="p-4 my-4 w-full bg-gray-700 "
