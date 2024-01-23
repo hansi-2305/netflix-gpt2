@@ -47,7 +47,8 @@ TMDB -> create account ->left side api ->find api key and api token
 -mutilinugual feature in our app(bonus)
 -integrate gpt apis
 
-
+platform.openAI.com ->see in constnts page written
+->mpm opnai ->install open ai ->
 
 
 

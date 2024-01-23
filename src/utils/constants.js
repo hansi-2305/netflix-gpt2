@@ -10,7 +10,8 @@ export const API_OPTIONS= {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNDBhOGM0NGRlODkzNGU1ZGI0M2Q5ZTc2ZThlY2M0YiIsInN1YiI6IjY1YWMxNWIxYWQ1OWI1MDBlYjc4NTczMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QGKSETgggmf-oq1EJmE5qy81Egtg6-8p0CJ-6FjdeC4'
+      // Authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNDBhOGM0NGRlODkzNGU1ZGI0M2Q5ZTc2ZThlY2M0YiIsInN1YiI6IjY1YWMxNWIxYWQ1OWI1MDBlYjc4NTczMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QGKSETgggmf-oq1EJmE5qy81Egtg6-8p0CJ-6FjdeC4"
+      Authorization: "Bearer" + process.env.REACT_APP_TMDB_KEY,
     }
   };
 
@@ -24,6 +25,15 @@ export const SUPPORTED_LANGUAGES = [{identifier: "en",  name: "English" },
 ];
 
 
+
+//platform.openai,com->same account use in chat grp->api-key->give it a name and the api key will be generated
+
+// export const OPENAI_KEY="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"
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+
+
+// export const OPENAI_KEY = "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"
 
 
 
