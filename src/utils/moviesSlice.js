@@ -1,23 +1,23 @@
-// import { createSlice } from "@reduxjs/toolkit";
+// // import { createSlice } from "@reduxjs/toolkit";
 
 
 
-// const moviesSlice=createSlice({
-//     name:"movies",
-//     initalState:{
-//         nowPlayingMovies:null,
-//     },
-//     reducers:{
-//         addNowPlayingMovies:(state,action)=>{
-//             state.nowPlayingMovies=action.payload
-//         }
-//     }
+// // const moviesSlice=createSlice({
+// //     name:"movies",
+// //     initalState:{
+// //         nowPlayingMovies:null,
+// //     },
+// //     reducers:{
+// //         addNowPlayingMovies:(state,action)=>{
+// //             state.nowPlayingMovies=action.payload
+// //         }
+// //     }
 
-// });
+// // });
 
-// export const{ addNowPlayingMovies }=moviesSlice.actions;
+// // export const{ addNowPlayingMovies }=moviesSlice.actions;
 
-// export default moviesSlice.reducer;
+// // export default moviesSlice.reducer;
 
 
 
@@ -28,16 +28,20 @@ const moviesSlice = createSlice({
     name: "movies",
     initialState: {
         nowPlayingMovies: null,
-        addTrailerVideo:null,
+       trailerVideo:null,
+       popularMovies:null
     },
     reducers: {
         addNowPlayingMovies: (state, action) => {
             state.nowPlayingMovies = action.payload;
         },
+        addPopularMovies: (state, action) => {
+            state.popularMovies = action.payload;
+        },
 
         addTrailerVideo:(state,action)=>{
 
-            state.TrailerVideo=action.payload;
+            state.trailerVideo=action.payload;
 
 
         }
@@ -47,6 +51,9 @@ const moviesSlice = createSlice({
 
 });
 
-export const {addNowPlayingMovies,addTrailerVideo} = moviesSlice.actions;
+export const {addNowPlayingMovies,addTrailerVideo,addPopularMovies} = moviesSlice.actions;
 
 export default moviesSlice.reducer;
+
+
+

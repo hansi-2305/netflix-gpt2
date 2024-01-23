@@ -131,9 +131,9 @@ const VideoBackground = ({movieId}) => {
        
         // src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?&autoplay=1&auto=1"} 
 
-        //  src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?&autoplay=1&auto=1"}
+         src={"https://www.youtube.com/embed/"+trailerVideo?.key+"?&autoplay=1&mute=1"}
 
-         src="https://www.youtube.com/embed/QfFasuouxQI?si=OJxLS0glpFPZZkgJ?&autoplay=1&mute=1"
+        //  src="https://www.youtube.com/embed/QfFasuouxQI?si=OJxLS0glpFPZZkgJ?&autoplay=1&mute=1"
 
 
 

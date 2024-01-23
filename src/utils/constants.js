@@ -13,3 +13,30 @@ export const API_OPTIONS= {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNDBhOGM0NGRlODkzNGU1ZGI0M2Q5ZTc2ZThlY2M0YiIsInN1YiI6IjY1YWMxNWIxYWQ1OWI1MDBlYjc4NTczMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QGKSETgggmf-oq1EJmE5qy81Egtg6-8p0CJ-6FjdeC4'
     }
   };
+
+export const IMG_CDN_URL="https://image.tmdb.org/t/p/w500/"
+
+
+
+export const SUPPORTED_LANGUAGES = [{identifier: "en",  name: "English" },
+  {identifier: "hindi",  name: "Hindi" },
+  {identifier: "spanish",  name: "Spanish" },
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//to fetch from tmdb we search for image api in search bar of google -> basics khulega usmei
+//img_cdn_url which need to be used when using images

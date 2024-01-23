@@ -65,15 +65,15 @@ const Login = () => {
         // ...
 
         
-        const {uid,email,displayName,photoURL} = auth.currentUser;
-        dispatch(
-          addUser({ 
-            uid:uid,
-            email:email,
-            displayName:displayName,
-            photoURL:photoURL
-          })
-        );
+        // const {uid,email,displayName,photoURL} = auth.currentUser;
+        // dispatch(
+        //   addUser({ 
+        //     uid:uid,
+        //     email:email,
+        //     displayName:displayName,
+        //     photoURL:photoURL
+        //   })
+        // );
 
 
 
@@ -110,7 +110,7 @@ const Login = () => {
           .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-           console.log("hello",user);
+          //  console.log("hello",user);
           //  navigate("/browse");
             // ...
           })

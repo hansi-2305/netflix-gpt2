@@ -36,6 +36,17 @@ TMDB -> create account ->left side api ->find api key and api token
 -update store with trailer video data
 -embedded the youtube vdo and make it auto play
 -added tailind css to make it more beautiful
+-build secondary components
+-Build movie list
+-build movie card
+-TMDB image cdn url
+-made the browse pafe amazing with T CSS
+-usePopularMovies Custom hook
+-GPT search page
+-gpt search bar
+-mutilinugual feature in our app(bonus)
+-integrate gpt apis
+
 
 
 
