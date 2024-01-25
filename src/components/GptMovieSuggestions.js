@@ -31,7 +31,7 @@ const GptMovieSuggestions = () => {
         }
 
        
-        <MovieList title={movieNames[0]} movies={movieResults[0]}></MovieList>
+        {/* <MovieList title={movieNames[0]} movies={movieResults[0]}></MovieList> */}
 
 
 

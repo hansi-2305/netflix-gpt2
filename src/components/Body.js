@@ -3,7 +3,7 @@ import Login from './Login'
 import Browse from './Browse'
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
-
+// import Moviedetails from './sub-movie/Moviedetails'
 // import { getAuth, onAuthStateChanged } from "firebase/auth";
 // import { auth } from "../utils/firebase";
 // import { useDispatch } from 'react-redux'
@@ -26,6 +26,11 @@ const Body = () => {
             element:<Browse/>
 
         },
+        // {
+        //     path: "/browse/:movieId",
+        //     element: <Moviedetails />,
+
+        // },
     ])
 
 
@@ -75,4 +80,4 @@ const Body = () => {
   )
 }
 
-export default Body
+export default Body;

@@ -46,9 +46,24 @@ TMDB -> create account ->left side api ->find api key and api token
 -gpt search bar
 -mutilinugual feature in our app(bonus)
 -integrate gpt apis
+-get gpt search open ai
+-gpt search api call
+-fetched gpt movie suggestions from TMDB
+-created gtpt slice added data
+-Reused move list component to make movie suggestion container
+-memoization
+-added .env file
+-adding .env file to git ignore
+-made our site responsive
+
+
+
+
+
 
 platform.openAI.com ->see in constnts page written
 ->mpm opnai ->install open ai ->
+
 
 
 
@@ -90,3 +105,10 @@ platform.openAI.com ->see in constnts page written
 ->on auth state change use karte hai humlog jab state chnage hota hai like signin or signup baar baar kuch activities k liye for this use docmnettion 
 Firebase->leftside->web->mamage uerd ->get the currently signed in useer 
 ->it is like event listener har baar call hoga yeh autiomatically->humlog ko baar baar dispatch action nhi likhna padega yehi sab mange kar dega
+
+
+to add icons
+
+npm install --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
