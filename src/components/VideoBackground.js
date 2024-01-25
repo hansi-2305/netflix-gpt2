@@ -91,16 +91,23 @@
 
 import {  useSelector } from "react-redux";
 import useMovieTrailer from "../hooks/useMovieTrailer"
-// import useMovieTrailer
+import { useEffect } from "react";
+
 
 
 const VideoBackground = ({movieId}) => {
 
   const trailerVideo =useSelector((store)=>store.movies?.trailerVideo)
+  const movieIdNo=useSelector((store)=>store.movies?.movieIdNo)
 
-  useMovieTrailer(movieId);
-  // console.log("golu",trailerVideo.key)
-
+  useMovieTrailer(movieIdNo);
+ 
+  useEffect(() => {
+    console.log("koii",movieIdNo)
+  
+    
+  })
+  
     
 
     return(

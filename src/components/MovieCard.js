@@ -2,17 +2,23 @@ import React from 'react'
 import { IMG_CDN_URL } from '../utils/constants'
 // import { useParams } from "react-router-dom";
 import VideoBackground from './VideoBackground';
-
-
+import { useDispatch } from 'react-redux';
+import { addMovieId } from '../utils/moviesSlice';
+ 
 const MovieCard = ({id,poster_path}) => {
 
 
+  const dispatch=useDispatch();
   
   const playVideo = () => {
     
     console.log("hello =",id);
     // const {movieId}=useParams();
+    dispatch(addMovieId(id));
+
     <VideoBackground moveId={id}/>;
+
+    
 
 
 
